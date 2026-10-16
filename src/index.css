@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0B0F19;
+    color: #F8FAFC;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars for dark glassmorphism aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(11, 15, 25, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 102, 255, 0.6);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(16, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(0, 102, 255, 0.3);
+  box-shadow: 0 8px 32px -8px rgba(0, 102, 255, 0.15);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px -4px rgba(0, 102, 255, 0.4);
+}
+
+.glow-red {
+  box-shadow: 0 0 25px -4px rgba(255, 42, 77, 0.4);
+}
+
+.text-gradient-yc {
+  background: linear-gradient(135deg, #00D2FF 0%, #0066FF 40%, #FF2A4D 80%, #FF6B8B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #00D2FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, #FF6B8B 0%, #FF2A4D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

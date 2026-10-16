@@ -1,0 +1,264 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "ppalanisamy17022@gmail.com",
+      "password_hash": "argon2_mock_hash_developer",
+      "full_name": "Palanisamy",
+      "role": "Lead Architect / Developer",
+      "daily_credits": 14,
+      "last_credit_reset": "2026-10-16T06:26:21.181Z",
+      "created_at": "2026-10-02T06:26:21.181Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "TaskForge Autonomous AI Engine",
+      "description": "Distributed AI agent framework with autonomous planning, multi-agent task dispatching, and automated code review.",
+      "tech_stack": "Python, FastAPI, PyTorch, React, Redis",
+      "team_size": 4,
+      "status": "In Progress",
+      "health": "Good",
+      "start_date": "2026-10-06",
+      "deadline": "2026-11-03",
+      "created_at": "2026-10-06T06:26:21.181Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "title": "CloudEdge Realtime Sync Gateway",
+      "description": "Ultra low-latency WebSocket & gRPC edge proxy for multi-tenant collaborative canvases and live operational transform sync.",
+      "tech_stack": "Go, WebSockets, gRPC, Redis, Docker",
+      "team_size": 3,
+      "status": "In Progress",
+      "health": "At Risk",
+      "start_date": "2026-10-08",
+      "deadline": "2026-10-20",
+      "created_at": "2026-10-08T06:26:21.181Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "title": "FinScale Distributed Microservices",
+      "description": "Event-driven high-throughput financial transaction processing engine with idempotency keys and audit logging.",
+      "tech_stack": "Node.js, TypeScript, PostgreSQL, Kafka, Vite",
+      "team_size": 5,
+      "status": "Completed",
+      "health": "Good",
+      "start_date": "2026-09-16",
+      "deadline": "2026-10-14",
+      "created_at": "2026-09-16T06:26:21.181Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "title": "SmartPulse Wearable Telemetry",
+      "description": "On-device health sensor ingestion pipeline with biometric anomaly detection using quantization-aware neural nets.",
+      "tech_stack": "Flutter, Flask, SQLite, TensorFlow Lite",
+      "team_size": 2,
+      "status": "Planning",
+      "health": "Delayed",
+      "start_date": "2026-10-14",
+      "deadline": "2026-11-10",
+      "created_at": "2026-10-14T06:26:21.181Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "title": "Design Agent Reasoning Graph & State Machine",
+      "description": "Formalize LangGraph style state transitions and rollback mechanisms for multi-turn task synthesis.",
+      "phase_name": "Phase 1: Architecture",
+      "priority": "High",
+      "status": "Completed",
+      "estimated_hours": 8,
+      "due_date": "2026-10-12",
+      "dependency_id": null
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "title": "Implement Prompt Routing & Token Optimization",
+      "description": "Build dynamic caching layer and few-shot exemplar selector to trim context length by 40%.",
+      "phase_name": "Phase 2: Core Engine",
+      "priority": "High",
+      "status": "In Progress",
+      "estimated_hours": 6.5,
+      "due_date": "2026-10-18",
+      "dependency_id": 1
+    },
+    {
+      "id": 3,
+      "project_id": 1,
+      "title": "Build Streaming Telemetry & Audit Logs UI",
+      "description": "Create real-time SSE stream listener displaying token consumption and execution latencies.",
+      "phase_name": "Phase 3: Frontend",
+      "priority": "Medium",
+      "status": "To Do",
+      "estimated_hours": 5,
+      "due_date": "2026-10-22",
+      "dependency_id": 2
+    },
+    {
+      "id": 4,
+      "project_id": 1,
+      "title": "End-to-End Stress Testing under Concurrent Quotas",
+      "description": "Simulate 500 concurrent synthetic users testing credit exhaustion and rate limiter resilience.",
+      "phase_name": "Phase 4: QA & Launch",
+      "priority": "Low",
+      "status": "To Do",
+      "estimated_hours": 10,
+      "due_date": "2026-10-30",
+      "dependency_id": 3
+    },
+    {
+      "id": 5,
+      "project_id": 2,
+      "title": "Fix Redis PubSub Channel Multiplexing Memory Leak",
+      "description": "Investigate unbounded subscriber buffer during connection dropouts in high volume clusters.",
+      "phase_name": "Phase 2: Stability",
+      "priority": "High",
+      "status": "In Progress",
+      "estimated_hours": 4.5,
+      "due_date": "2026-10-16",
+      "dependency_id": null
+    },
+    {
+      "id": 6,
+      "project_id": 2,
+      "title": "Migrate Ephemeral Session State to Redis Cluster",
+      "description": "Configure distributed locks with Redlock algorithm to avoid split-brain state conflicts.",
+      "phase_name": "Phase 2: Stability",
+      "priority": "High",
+      "status": "To Do",
+      "estimated_hours": 7,
+      "due_date": "2026-10-17",
+      "dependency_id": 5
+    },
+    {
+      "id": 7,
+      "project_id": 2,
+      "title": "Implement TLS Handshake Termination on Envoy Proxy",
+      "description": "Set up automated Let's Encrypt certificate renewal and HTTP/2 protocol negotiation.",
+      "phase_name": "Phase 1: Networking",
+      "priority": "Medium",
+      "status": "Completed",
+      "estimated_hours": 6,
+      "due_date": "2026-10-11",
+      "dependency_id": null
+    },
+    {
+      "id": 8,
+      "project_id": 3,
+      "title": "Deploy Zero-Downtime Database Migration on Cloud SQL",
+      "description": "Execute blue-green partition migration for ledger_entries table with dual-write phase.",
+      "phase_name": "Phase 3: Production Release",
+      "priority": "High",
+      "status": "Completed",
+      "estimated_hours": 12,
+      "due_date": "2026-10-13",
+      "dependency_id": null
+    },
+    {
+      "id": 9,
+      "project_id": 3,
+      "title": "Finalize SOC-2 Audit Logging Trail Export",
+      "description": "Export structured immutable JSON logs to cold storage bucket with cryptographic signatures.",
+      "phase_name": "Phase 3: Production Release",
+      "priority": "Medium",
+      "status": "Completed",
+      "estimated_hours": 5,
+      "due_date": "2026-10-14",
+      "dependency_id": 8
+    },
+    {
+      "id": 10,
+      "project_id": 4,
+      "title": "Calibrate PPG Optical Sensor Noise Filtering",
+      "description": "Apply Kalman filtering and bandpass filters to suppress motion artifacts during movement.",
+      "phase_name": "Phase 1: Data Acquisition",
+      "priority": "High",
+      "status": "To Do",
+      "estimated_hours": 8,
+      "due_date": "2026-10-21",
+      "dependency_id": null
+    },
+    {
+      "id": 11,
+      "project_id": 4,
+      "title": "Quantize Heart Rate Variability TFLite Model to INT8",
+      "description": "Shrink model size below 4MB to fit embedded microcontroller RAM limitations.",
+      "phase_name": "Phase 1: Data Acquisition",
+      "priority": "Medium",
+      "status": "In Progress",
+      "estimated_hours": 9,
+      "due_date": "2026-10-25",
+      "dependency_id": 10
+    }
+  ],
+  "milestones": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "title": "Alpha Core Agent Dispatching Prototype",
+      "target_date": "2026-10-21",
+      "is_completed": false
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "title": "Public Beta & Performance Benchmark Release",
+      "target_date": "2026-11-03",
+      "is_completed": false
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "title": "Zero Memory Leak Edge Gateway Release",
+      "target_date": "2026-10-20",
+      "is_completed": false
+    },
+    {
+      "id": 4,
+      "project_id": 3,
+      "title": "Full SOC-2 Certified Production Cutover",
+      "target_date": "2026-10-14",
+      "is_completed": true
+    },
+    {
+      "id": 5,
+      "project_id": 4,
+      "title": "Embedded Firmware Ingestion Proof of Concept",
+      "target_date": "2026-10-31",
+      "is_completed": false
+    }
+  ],
+  "credit_logs": [
+    {
+      "id": 2,
+      "user_id": 1,
+      "action_type": "CHAT",
+      "credits_spent": 1,
+      "timestamp": "2026-10-16T06:26:36.608Z",
+      "details": "Chat query: \"Which tasks are overdue?...\""
+    },
+    {
+      "id": 1,
+      "user_id": 1,
+      "action_type": "PLAN_GEN",
+      "credits_spent": 5,
+      "timestamp": "2026-10-16T01:26:21.181Z",
+      "details": "Generated full project roadmap for \"TaskForge Autonomous AI Engine\""
+    }
+  ],
+  "nextIds": {
+    "user": 2,
+    "project": 5,
+    "task": 12,
+    "milestone": 6,
+    "credit_log": 3
+  }
+}
